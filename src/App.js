@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Client as Styletron} from 'styletron-engine-atomic';
+import {Provider as StyletronProvider} from 'styletron-react';
+import {LightTheme, BaseProvider} from 'baseui';
+import StatefulProductList from "./components/StatefulProductList";
+
+import { API_BASE } from './endpoint.config'
+
+const engine = new Styletron();
+
+const fetchOptions = {
+  method: 'GET',
+  header: { 'Content-Type': 'application/json' },
+};
 
 function App() {
+  const [avaliableProducts, setAvaliableProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(`${API_BASE}/products.json`, fetchOptions).then( (response) => {
+      response.json().then((json)=>{
+        setAvaliableProducts(json['review'])
+      })
+    })
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StyletronProvider value={engine}>
+        <BaseProvider theme={LightTheme}>
+          <StatefulProductList avaliableProducts={avaliableProducts} numProductPerPage={5} />
+        </BaseProvider>
+      </StyletronProvider>
     </div>
   );
 }
