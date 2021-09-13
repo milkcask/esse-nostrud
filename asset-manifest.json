@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/esse-nostrud/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/esse-nostrud/static/js/main.6f568d05.chunk.js",
+    "main.js.map": "/esse-nostrud/static/js/main.6f568d05.chunk.js.map",
+    "runtime-main.js": "/esse-nostrud/static/js/runtime-main.21a25db5.js",
+    "runtime-main.js.map": "/esse-nostrud/static/js/runtime-main.21a25db5.js.map",
+    "static/js/2.2ee4f459.chunk.js": "/esse-nostrud/static/js/2.2ee4f459.chunk.js",
+    "static/js/2.2ee4f459.chunk.js.map": "/esse-nostrud/static/js/2.2ee4f459.chunk.js.map",
+    "static/js/3.857e2aba.chunk.js": "/esse-nostrud/static/js/3.857e2aba.chunk.js",
+    "static/js/3.857e2aba.chunk.js.map": "/esse-nostrud/static/js/3.857e2aba.chunk.js.map",
+    "index.html": "/esse-nostrud/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/esse-nostrud/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.2ee4f459.chunk.js.LICENSE.txt": "/esse-nostrud/static/js/2.2ee4f459.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21a25db5.js",
+    "static/js/2.2ee4f459.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.6f568d05.chunk.js"
+  ]
+}
